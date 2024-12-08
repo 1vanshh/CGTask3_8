@@ -7,14 +7,15 @@
     <list default="true" id="ea8ae06c-0684-47cd-9429-1bfaf7692ea8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/Affine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task3_8.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Task3_8.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/SubAffine.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/affineTransormation/Rotate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/affineTransormation/Rotate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/affineTransormation/Scale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/affineTransormation/Scale.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/affineTransormation/Translation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/affineTransormation/Translation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/iAffine/IAffine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/iAffine/IAffine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/simpleMath/Vec3f.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/simpleMath/Vec3f.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/iAffine/SubAffine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/iAffine/SubAffine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/simpleMath/Multiply.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/simpleMath/Vec3f.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +25,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -46,36 +48,124 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/CG/SoftwareRender/SoftwareRender&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ivan/Desktop/Math-main/out/artifacts/Math_jar/Math.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;D:/CG/CGTask3_8/Task3_8/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.vsu.cs.Main" />
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.vsu.cs.tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TranslationTest">
+    <configuration name="ScaleTest.testScale" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Task3_8" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.vsu.cs.*" />
+          <option name="PATTERN" value="ru.vsu.cs.testing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="ru.vsu.cs.testing" />
+      <option name="MAIN_CLASS_NAME" value="ru.vsu.cs.testing.ScaleTest" />
+      <option name="METHOD_NAME" value="testScale" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScaleTest.testZeroScale" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task3_8" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.vsu.cs.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.vsu.cs.testing" />
+      <option name="MAIN_CLASS_NAME" value="ru.vsu.cs.testing.ScaleTest" />
+      <option name="METHOD_NAME" value="testZeroScale" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TranslationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task3_8" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.vsu.cs.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.vsu.cs.testing" />
+      <option name="MAIN_CLASS_NAME" value="ru.vsu.cs.testing.TranslationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TranslationTest.testTranslateX" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task3_8" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.vsu.cs.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.vsu.cs.testing" />
+      <option name="MAIN_CLASS_NAME" value="ru.vsu.cs.testing.TranslationTest" />
+      <option name="METHOD_NAME" value="testTranslateX" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TranslationTest.testTranslateXYZ" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task3_8" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.vsu.cs.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.vsu.cs.testing" />
+      <option name="MAIN_CLASS_NAME" value="ru.vsu.cs.testing.TranslationTest" />
+      <option name="METHOD_NAME" value="testTranslateXYZ" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TranslationTest" />
+        <item itemvalue="JUnit.TranslationTest.testTranslateXYZ" />
+        <item itemvalue="JUnit.TranslationTest.testTranslateX" />
+        <item itemvalue="JUnit.ScaleTest.testScale" />
+        <item itemvalue="JUnit.ScaleTest.testZeroScale" />
       </list>
     </recent_temporary>
   </component>
@@ -100,6 +190,8 @@
       <workItem from="1732808388699" duration="2002000" />
       <workItem from="1732949951571" duration="89000" />
       <workItem from="1732955433838" duration="5285000" />
+      <workItem from="1733399420737" duration="7861000" />
+      <workItem from="1733655895848" duration="1349000" />
     </task>
     <servers />
   </component>

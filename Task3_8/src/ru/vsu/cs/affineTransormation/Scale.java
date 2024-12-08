@@ -1,7 +1,8 @@
 package ru.vsu.cs.affineTransormation;
 
+import Matrixes.Matrix4f;
+import Vectors.Vector4f;
 import ru.vsu.cs.iAffine.IAffine;
-import ru.vsu.cs.simpleMath.Vec3f;
 
 public class Scale implements IAffine {
 
@@ -15,24 +16,23 @@ public class Scale implements IAffine {
         this.z = z;
     }
 
-    public Scale(Vec3f vec) {
-        this.x = vec.x;
-        this.y = vec.y;
-        this.z = vec.z;
+    public Scale(Vector4f vec) {
+        this.x = vec.getX();
+        this.y = vec.getY();
+        this.z = vec.getZ();
     }
 
     @Override
-    public Vec3f transformation(Vec3f vec) {
+    public Vector4f transformation(Vector4f vec) {
         return IAffine.super.transformation(vec);
     }
 
     @Override
-    public float[][] getMatrix() {
-        return new float[][] {
-                {x, 0, 0, 0},
-                {0, y, 0, 0},
-                {0, 0, z, 0},
-                {0, 0, 0, 1}
-        };
+    public Matrix4f getMatrix() {
+        return new Matrix4f(
+                x, 0, 0, 0,
+                0, y, 0, 0,
+                0, 0, z, 0,
+                0, 0, 0, 1);
     }
 }

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Math">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Math-main/out/artifacts/Math_jar/Math.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,7 +1,7 @@
 package ru.vsu.cs.iAffine;
 
-import ru.vsu.cs.simpleMath.Multiply;
-import ru.vsu.cs.simpleMath.Vec3f;
+import Matrixes.Matrix4f;
+import Vectors.Vector4f;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,23 +23,20 @@ public class SubAffine implements IAffine{
     }
 
     @Override
-    public Vec3f transformation(Vec3f vec) {
+    public Vector4f transformation(Vector4f vec) {
         return IAffine.super.transformation(vec);
     }
 
     @Override
-    public float[][] getMatrix() {
-        float[][] answer = new float[4][4];
+    public Matrix4f getMatrix() {
+        if (affines.isEmpty()) return Matrix4f.setZero();
 
-        for (int i = 1; i < affines.size(); i++) {
-            float[][] temp;
-            temp = Multiply.mult(affines.get(i - 1).getMatrix(), affines.get(i).getMatrix());
-            if (i > 2) temp = Multiply.mult(temp, affines.get(i).getMatrix());
+        Matrix4f current = affines.removeFirst().getMatrix();
 
-
-            answer = temp;
+        for (int i = 0; i < affines.size(); i++) {
+            current = current.matrixProduct(affines.get(i).getMatrix());
         }
 
-        return answer;
+        return current;
     }
 }

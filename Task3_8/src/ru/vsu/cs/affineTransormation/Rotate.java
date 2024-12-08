@@ -1,7 +1,8 @@
 package ru.vsu.cs.affineTransormation;
 
+import Matrixes.Matrix4f;
+import Vectors.Vector4f;
 import ru.vsu.cs.iAffine.IAffine;
-import ru.vsu.cs.simpleMath.Vec3f;
 
 public class Rotate implements IAffine {
 
@@ -20,62 +21,62 @@ public class Rotate implements IAffine {
     }
 
     @Override
-    public Vec3f transformation(Vec3f vec) {
+    public Vector4f transformation(Vector4f vec) {
         return IAffine.super.transformation(vec);
     }
 
     @Override
-    public float[][] getMatrix() {
+    public Matrix4f getMatrix() {
         if (xRotate) return getRotateXMatrix();
         if (yRotate) return getRotateYMatrix();
         return getRotateZMatrix();
     }
 
-    public float[][] getRotateXMatrix() {
+    private Matrix4f getRotateXMatrix() {
         if (!leftRotate) {
-            return new float[][] {
-                    {1, 0, 0, 0},
-                    {0, (float) Math.cos(Math.toRadians(angle)), (float) Math.sin(Math.toRadians(angle)), 0},
-                    {0, (float) -Math.sin(Math.toRadians(angle)), (float) Math.cos(Math.toRadians(angle)), 0},
-                    {0, 0, 0, 1}
-            };
-        } else return new float[][] {
-                {1, 0, 0, 0},
-                {0, (float) Math.cos(Math.toRadians(angle)), (float) -Math.sin(Math.toRadians(angle)), 0},
-                {0, (float) Math.sin(Math.toRadians(angle)), (float) Math.cos(Math.toRadians(angle)), 0},
-                {0, 0, 0, 1}
-        };
+            return new Matrix4f(
+                    1, 0, 0, 0,
+                    0, (float) Math.cos(Math.toRadians(angle)), (float) Math.sin(Math.toRadians(angle)), 0,
+                    0, (float) -Math.sin(Math.toRadians(angle)), (float) Math.cos(Math.toRadians(angle)), 0,
+                    0, 0, 0, 1
+            );
+        } else return new Matrix4f(
+                1, 0, 0, 0,
+                0, (float) Math.cos(Math.toRadians(angle)), (float) -Math.sin(Math.toRadians(angle)), 0,
+                0, (float) Math.sin(Math.toRadians(angle)), (float) Math.cos(Math.toRadians(angle)), 0,
+                0, 0, 0, 1
+        );
     }
 
-    public float[][] getRotateYMatrix() {
+    private Matrix4f getRotateYMatrix() {
         if (!leftRotate) {
-            return new float[][] {
-                    {(float) Math.cos(Math.toRadians(angle)), 0, (float) Math.sin(Math.toRadians(angle)), 0},
-                    {0, 1, 0, 0},
-                    {(float) -Math.sin(Math.toRadians(angle)), 0, (float) Math.cos(Math.toRadians(angle)), 0},
-                    {0, 0, 0, 1}
-            };
-        } else return new float[][] {
-                {(float) Math.cos(Math.toRadians(angle)), 0, (float) -Math.sin(Math.toRadians(angle)), 0},
-                {0, 1, 0, 0},
-                {(float) Math.sin(Math.toRadians(angle)), 0, (float) Math.cos(Math.toRadians(angle)), 0},
-                {0, 0, 0, 1}
-        };
+            return new Matrix4f (
+                    (float) Math.cos(Math.toRadians(angle)), 0, (float) Math.sin(Math.toRadians(angle)), 0,
+                    0, 1, 0, 0,
+                    (float) -Math.sin(Math.toRadians(angle)), 0, (float) Math.cos(Math.toRadians(angle)), 0,
+                    0, 0, 0, 1
+            );
+        } else return new Matrix4f (
+                (float) Math.cos(Math.toRadians(angle)), 0, (float) -Math.sin(Math.toRadians(angle)), 0,
+                0, 1, 0, 0,
+                (float) Math.sin(Math.toRadians(angle)), 0, (float) Math.cos(Math.toRadians(angle)), 0,
+                0, 0, 0, 1
+        );
     }
 
-    public float[][] getRotateZMatrix() {
+    private Matrix4f getRotateZMatrix() {
         if (!leftRotate) {
-            return new float[][] {
-                    {(float) Math.cos(Math.toRadians(angle)), (float) Math.sin(Math.toRadians(angle)), 0, 0},
-                    {(float) -Math.sin(Math.toRadians(angle)), (float) Math.cos(Math.toRadians(angle)), 0, 0},
-                    {0, 0, 1, 0},
-                    {0, 0, 0, 1}
-            };
-        } else return new float[][] {
-                {(float) Math.cos(Math.toRadians(angle)), (float) -Math.sin(Math.toRadians(angle)), 0, 0},
-                {(float) Math.sin(Math.toRadians(angle)), (float) Math.cos(Math.toRadians(angle)), 0, 0},
-                {0, 0, 1, 0},
-                {0, 0, 0, 1}
-        };
+            return new Matrix4f (
+                    (float) Math.cos(Math.toRadians(angle)), (float) Math.sin(Math.toRadians(angle)), 0, 0,
+                    (float) -Math.sin(Math.toRadians(angle)), (float) Math.cos(Math.toRadians(angle)), 0, 0,
+                    0, 0, 1, 0,
+                    0, 0, 0, 1
+            );
+        } else return new Matrix4f (
+                (float) Math.cos(Math.toRadians(angle)), (float) -Math.sin(Math.toRadians(angle)), 0, 0,
+                (float) Math.sin(Math.toRadians(angle)), (float) Math.cos(Math.toRadians(angle)), 0, 0,
+                0, 0, 1, 0,
+                0, 0, 0, 1
+        );
     }
 }
