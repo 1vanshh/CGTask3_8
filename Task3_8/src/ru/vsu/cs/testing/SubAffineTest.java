@@ -1,19 +1,19 @@
-package ru.vsu.cs;
+package ru.vsu.cs.testing;
 
 import Vectors.Vector4f;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import ru.vsu.cs.affineTransormation.Rotate;
 import ru.vsu.cs.affineTransormation.Scale;
 import ru.vsu.cs.affineTransormation.SubAffine;
 import ru.vsu.cs.affineTransormation.Translation;
 
-public class Main {
+public class SubAffineTest {
 
-//    public static Vec3f transform(Vec3f f, IAffine affine) {
-//        Vec3f a = Multiply.multiply(f, affine.getMatrix());
-//        return a;
-//    }
-    public static void main(String[] args) {
-
+    @Test
+    void testZeroScale() {
+        Vector4f vec = new Vector4f(7, 7, 7, 1);
+        Vector4f expected = new Vector4f(14, -14, 16, 1);
         Scale scale = new Scale(2, 2, 2);
         Rotate rotate = new Rotate(90, false, false, true, false);
         Translation translation = new Translation(0, 0, 1);
@@ -23,6 +23,8 @@ public class Main {
         subAffine.add(rotate);
         subAffine.add(translation);
 
-        System.out.println(subAffine.getMatrix().toString());
+        Vector4f result = subAffine.getMatrix().multiplyByVector(vec);
+
+        Assertions.assertTrue(expected.isEqual(result));
     }
 }

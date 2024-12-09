@@ -1,25 +1,27 @@
-package ru.vsu.cs.iAffine;
+package ru.vsu.cs.affineTransormation;
 
 import Matrixes.Matrix4f;
 import Vectors.Vector4f;
+import ru.vsu.cs.iAffine.IAffine;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SubAffine implements IAffine{
+public class SubAffine implements IAffine {
 
     private List<IAffine> affines = new ArrayList<>();
 
     public SubAffine(List<IAffine> affines) {
-        this.affines = affines;
+        if (affines != null)
+            this.affines = affines;
     }
 
     public SubAffine() {
-
     }
 
     public void add(IAffine affine) {
-        affines.add(affine);
+        if (affine != null)
+            affines.add(affine);
     }
 
     @Override
@@ -31,9 +33,9 @@ public class SubAffine implements IAffine{
     public Matrix4f getMatrix() {
         if (affines.isEmpty()) return Matrix4f.setZero();
 
-        Matrix4f current = affines.removeFirst().getMatrix();
+        Matrix4f current = affines.get(0).getMatrix();
 
-        for (int i = 0; i < affines.size(); i++) {
+        for (int i = 1; i < affines.size(); i++) {
             current = current.matrixProduct(affines.get(i).getMatrix());
         }
 
