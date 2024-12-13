@@ -50,4 +50,15 @@ public class TranslationTest {
 
         Assertions.assertTrue(expected.isEqual(result));
     }
+
+    @Test
+    void testZero() {
+        Vector4f vec = new Vector4f(123, 431, 1234, 1);
+        Vector4f expected = new Vector4f(123, 431, 1234, 1);
+        Translation translation = new Translation();
+
+        Vector4f result = translation.getMatrix().multiplyByVector(vec);
+
+        Assertions.assertTrue(expected.isEqual(result));
+    }
 }

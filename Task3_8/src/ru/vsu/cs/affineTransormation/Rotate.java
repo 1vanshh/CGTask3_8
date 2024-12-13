@@ -1,54 +1,49 @@
 package ru.vsu.cs.affineTransormation;
 
 import Matrixes.Matrix4f;
-import Vectors.Vector4f;
 import ru.vsu.cs.iAffine.IAffine;
 
 public class Rotate implements IAffine {
 
-    private float angle;
-    private boolean xRotate;
-    private boolean yRotate;
-    private boolean zRotate;
-    private boolean leftRotate;
-
-    public Rotate(float angle, boolean xRotate, boolean yRotate, boolean zRotate, boolean leftRotate) {
-        this.angle = angle;
-        this.xRotate = xRotate;
-        this.yRotate = yRotate;
-        this.zRotate = zRotate;
-        this.leftRotate = leftRotate;
+    public enum Axis {
+        X, Y, Z
     }
 
-    @Override
-    public Vector4f transformation(Vector4f vec) {
-        return IAffine.super.transformation(vec);
+    private float angle;
+    private Axis axisOfRotation;
+    private Matrix4f matrix;
+
+    public Rotate(float angle, Axis axisOfRotation) {
+        this.angle = angle;
+        this.axisOfRotation = axisOfRotation;
+
+        switch (axisOfRotation) {
+            case X:
+                getRotateXMatrix(Math.toRadians(angle));
+                break;
+            case Y:
+                getRotateYMatrix(Math.toRadians(angle));
+                break;
+            case Z:
+                getRotateZMatrix(Math.toRadians(angle));
+                break;
+        }
+    }
+
+    public Rotate() {
+        matrix = Matrix4f.setIdentity();
     }
 
     @Override
     public Matrix4f getMatrix() {
-        double angleRad = Math.toRadians(angle);
-        Matrix4f matrix = Matrix4f.setIdentity();
-
-        if (xRotate) matrix = matrix.matrixProduct(getRotateXMatrix(angleRad));
-        if (yRotate) matrix = matrix.matrixProduct(getRotateYMatrix(angleRad));
-        if (zRotate) matrix = matrix.matrixProduct(getRotateZMatrix(angleRad));
-
         return matrix;
     }
 
-    private Matrix4f getRotateXMatrix(double angleRad) {
+    private void getRotateXMatrix(double angleRad) {
         float cos = (float) Math.cos(angleRad);
         float sin = (float) Math.sin(angleRad);
 
-        if (leftRotate) {
-            return new Matrix4f(
-                    1, 0, 0, 0,
-                    0, cos, -sin, 0,
-                    0, sin, cos, 0,
-                    0, 0, 0, 1
-            );
-        } else return new Matrix4f(
+        matrix = new Matrix4f(
                 1, 0, 0, 0,
                 0, cos, sin, 0,
                 0, -sin, cos, 0,
@@ -56,18 +51,11 @@ public class Rotate implements IAffine {
         );
     }
 
-    private Matrix4f getRotateYMatrix(double angleRad) {
+    private void getRotateYMatrix(double angleRad) {
         float cos = (float) Math.cos(angleRad);
         float sin = (float) Math.sin(angleRad);
 
-        if (leftRotate) {
-            return new Matrix4f(
-                    cos, 0, -sin, 0,
-                    0, 1, 0, 0,
-                    sin, 0, cos, 0,
-                    0, 0, 0, 1
-            );
-        } else return new Matrix4f(
+        matrix = new Matrix4f(
                 cos, 0, sin, 0,
                 0, 1, 0, 0,
                 -sin, 0, cos, 0,
@@ -75,18 +63,11 @@ public class Rotate implements IAffine {
         );
     }
 
-    private Matrix4f getRotateZMatrix(double angleRad) {
+    private void getRotateZMatrix(double angleRad) {
         float cos = (float) Math.cos(angleRad);
         float sin = (float) Math.sin(angleRad);
 
-        if (leftRotate) {
-            return new Matrix4f(
-                    cos, -sin, 0, 0,
-                    sin, cos, 0, 0,
-                    0, 0, 1, 0,
-                    0, 0, 0, 1
-            );
-        } else return new Matrix4f(
+        matrix = new Matrix4f(
                 cos, sin, 0, 0,
                 -sin, cos, 0, 0,
                 0, 0, 1, 0,

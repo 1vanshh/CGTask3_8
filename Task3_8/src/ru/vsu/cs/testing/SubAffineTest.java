@@ -15,7 +15,7 @@ public class SubAffineTest {
         Vector4f vec = new Vector4f(7, 7, 7, 1);
         Vector4f expected = new Vector4f(14, -14, 16, 1);
         Scale scale = new Scale(2, 2, 2);
-        Rotate rotate = new Rotate(90, false, false, true, false);
+        Rotate rotate = new Rotate(90, Rotate.Axis.Z);
         Translation translation = new Translation(0, 0, 1);
 
         SubAffine subAffine = new SubAffine();

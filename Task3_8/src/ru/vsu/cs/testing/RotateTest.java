@@ -9,10 +9,10 @@ import ru.vsu.cs.affineTransormation.Rotate;
 public class RotateTest {
 
     @Test
-    void testRightRotateX() {
+    void testRightRotateX() throws Exception {
         Vector4f vec = new Vector4f(0, 1, 0, 1);
         Vector4f expected = new Vector4f(0, 0, -1, 1);
-        Rotate rotate = new Rotate(90, true, false, false, false);
+        Rotate rotate = new Rotate(90, Rotate.Axis.X);
 
         Vector4f result = rotate.getMatrix().multiplyByVector(vec);
 
@@ -23,7 +23,7 @@ public class RotateTest {
     void testLeftRotateX() {
         Vector4f vec = new Vector4f(0, 1, 0, 1);
         Vector4f expected = new Vector4f(0, 0, 1, 1);
-        Rotate rotate = new Rotate(90, true, false, false, true);
+        Rotate rotate = new Rotate(-90, Rotate.Axis.X);
 
         Vector4f result = rotate.getMatrix().multiplyByVector(vec);
 
@@ -34,7 +34,7 @@ public class RotateTest {
     void testRightRotateY() {
         Vector4f vec = new Vector4f(1, 0, 0, 1);
         Vector4f expected = new Vector4f(0, 0, -1, 1);
-        Rotate rotate = new Rotate(90, false, true, false, false);
+        Rotate rotate = new Rotate(90, Rotate.Axis.Y);
 
         Vector4f result = rotate.getMatrix().multiplyByVector(vec);
 
@@ -45,7 +45,7 @@ public class RotateTest {
     void testLeftRotateY() {
         Vector4f vec = new Vector4f(5, 0, 0, 1);
         Vector4f expected = new Vector4f(0, 0, 5, 1);
-        Rotate rotate = new Rotate(90, false, true, false, true);
+        Rotate rotate = new Rotate(-90, Rotate.Axis.Y);
 
         Vector4f result = rotate.getMatrix().multiplyByVector(vec);
 
@@ -56,7 +56,7 @@ public class RotateTest {
     void testRightRotateZ() {
         Vector4f vec = new Vector4f(0, 2, 0, 1);
         Vector4f expected = new Vector4f(2, 0, 0, 1);
-        Rotate rotate = new Rotate(90, false, false, true, false);
+        Rotate rotate = new Rotate(90, Rotate.Axis.Z);
 
         Vector4f result = rotate.getMatrix().multiplyByVector(vec);
 
@@ -67,7 +67,18 @@ public class RotateTest {
     void testLeftRotateZ() {
         Vector4f vec = new Vector4f(7, 0, 0, 1);
         Vector4f expected = new Vector4f(0, 7, 0, 1);
-        Rotate rotate = new Rotate(90, false, false, true, true);
+        Rotate rotate = new Rotate(-90, Rotate.Axis.Z);
+
+        Vector4f result = rotate.getMatrix().multiplyByVector(vec);
+
+        Assertions.assertTrue(expected.isEqual(result));
+    }
+
+    @Test
+    void ZeroTest() {
+        Vector4f vec = new Vector4f(7, 73, 35, 1);
+        Vector4f expected = new Vector4f(7, 73, 35, 1);
+        Rotate rotate = new Rotate();
 
         Vector4f result = rotate.getMatrix().multiplyByVector(vec);
 

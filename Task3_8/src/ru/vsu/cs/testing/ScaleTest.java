@@ -11,7 +11,7 @@ public class ScaleTest {
     void testZeroScale() {
         Vector4f vec = new Vector4f(7, 7, 7, 1);
         Vector4f expected = new Vector4f(7, 7, 7, 1);
-        Scale scale = new Scale(1, 1, 1);
+        Scale scale = new Scale();
 
         Vector4f result = scale.getMatrix().multiplyByVector(vec);
 

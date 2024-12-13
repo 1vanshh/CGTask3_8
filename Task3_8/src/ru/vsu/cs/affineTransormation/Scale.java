@@ -6,30 +6,40 @@ import Vectors.Vector4f;
 import ru.vsu.cs.iAffine.IAffine;
 
 public class Scale implements IAffine {
-
-    private final float x;
-    private final float y;
-    private final float z;
+    private Matrix4f matrix;
 
     // Конструктор с координатами для масштабирования
     public Scale(float x, float y, float z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
+        matrix = new Matrix4f(
+                x, 0, 0, 0,
+                0, y, 0, 0,
+                0, 0, z, 0,
+                0, 0, 0, 1
+        );
     }
 
     // Конструктор с 4-х мерным вектором, определяющим масштаб
     public Scale(Vector4f vec) {
-        this.x = vec.getX();
-        this.y = vec.getY();
-        this.z = vec.getZ();
+        matrix = new Matrix4f(
+                vec.getX(), 0, 0, 0,
+                0, vec.getY(), 0, 0,
+                0, 0, vec.getZ(), 0,
+                0, 0, 0, 1
+        );
     }
 
     // Конструктор с 3-х мерным вектором, определяющим масштаб
     public Scale(Vector3f vec) {
-        this.x = vec.getX();
-        this.y = vec.getY();
-        this.z = vec.getZ();
+        matrix = new Matrix4f(
+                vec.getX(), 0, 0, 0,
+                0, vec.getY(), 0, 0,
+                0, 0, vec.getZ(), 0,
+                0, 0, 0, 1
+        );
+    }
+
+    public Scale() {
+        matrix = Matrix4f.setIdentity();
     }
 
     @Override
@@ -39,10 +49,6 @@ public class Scale implements IAffine {
 
     @Override
     public Matrix4f getMatrix() {
-        return new Matrix4f(
-                x, 0, 0, 0,
-                0, y, 0, 0,
-                0, 0, z, 0,
-                0, 0, 0, 1);
+        return matrix;
     }
 }
