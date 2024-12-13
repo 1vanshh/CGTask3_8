@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Task3_8:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea8ae06c-0684-47cd-9429-1bfaf7692ea8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Math1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_12_2024_22_42__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_12_2024_22_42__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Math.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Task3_8.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Task3_8.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/affineTransormation/Rotate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/affineTransormation/Rotate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/affineTransormation/Scale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/affineTransormation/Scale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/affineTransormation/Translation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/affineTransormation/Translation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/testing/RotateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/testing/RotateTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/testing/ScaleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/testing/ScaleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/testing/SubAffineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/testing/SubAffineTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/testing/RotateTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/testing/ScaleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/testing/SubAffineTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/testing/TranslationTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,32 +48,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-23&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/CG/CGTask3_8/Task3_8/dependencies/Math.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/CG/CGTask3_8/Task3_8/dependencies/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.21954022&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "openjdk-23",
+    "last_opened_file_path": "D:/CG/CGTask3_8/Task3_8/dependencies/Math.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "onboarding.tips.debug.path": "D:/CG/CGTask3_8/Task3_8/dependencies/src/Main.java",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.21954022",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\CG\CGTask3_8\Task3_8\dependencies" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TranslationTest.testZero">
-    <configuration name="RotateTest.ZeroTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.RotateTest">
+    <configuration name="RotateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Task3_8" />
       <extension name="coverage">
         <pattern>
@@ -80,8 +87,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.vsu.cs.testing" />
       <option name="MAIN_CLASS_NAME" value="ru.vsu.cs.testing.RotateTest" />
-      <option name="METHOD_NAME" value="ZeroTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -101,7 +107,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubAffineTest.testZeroScale" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SubAffineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Task3_8" />
       <extension name="coverage">
         <pattern>
@@ -111,8 +117,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.vsu.cs.testing" />
       <option name="MAIN_CLASS_NAME" value="ru.vsu.cs.testing.SubAffineTest" />
-      <option name="METHOD_NAME" value="testZeroScale" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -150,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RotateTest" />
+        <item itemvalue="JUnit.SubAffineTest" />
+        <item itemvalue="JUnit.ScaleTest" />
         <item itemvalue="JUnit.TranslationTest.testZero" />
         <item itemvalue="JUnit.TranslationTest" />
-        <item itemvalue="JUnit.RotateTest.ZeroTest" />
-        <item itemvalue="JUnit.ScaleTest" />
-        <item itemvalue="JUnit.SubAffineTest.testZeroScale" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +185,7 @@
       <workItem from="1732949951571" duration="89000" />
       <workItem from="1732955433838" duration="5285000" />
       <workItem from="1734090682188" duration="2388000" />
-      <workItem from="1734113668194" duration="1276000" />
+      <workItem from="1734113668194" duration="1766000" />
     </task>
     <servers />
   </component>
