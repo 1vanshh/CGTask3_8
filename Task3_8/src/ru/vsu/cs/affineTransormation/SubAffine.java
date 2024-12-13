@@ -12,8 +12,10 @@ public class SubAffine implements IAffine {
     private List<IAffine> affines = new ArrayList<>();
 
     public SubAffine(List<IAffine> affines) {
-        if (affines != null)
-            this.affines = affines;
+        if (affines != null) {
+            List<IAffine> afi = new ArrayList<>(affines);
+            this.affines = afi;
+        }
     }
 
     public SubAffine() {

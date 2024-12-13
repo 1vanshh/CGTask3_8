@@ -7,9 +7,9 @@ import ru.vsu.cs.iAffine.IAffine;
 
 public class Scale implements IAffine {
 
-    private float x;
-    private float y;
-    private float z;
+    private final float x;
+    private final float y;
+    private final float z;
 
     // Конструктор с координатами для масштабирования
     public Scale(float x, float y, float z) {

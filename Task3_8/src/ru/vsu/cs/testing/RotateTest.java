@@ -33,7 +33,7 @@ public class RotateTest {
     @Test
     void testRightRotateY() {
         Vector4f vec = new Vector4f(1, 0, 0, 1);
-        Vector4f expected = new Vector4f(0, 0, 1, 1);
+        Vector4f expected = new Vector4f(0, 0, -1, 1);
         Rotate rotate = new Rotate(90, false, true, false, false);
 
         Vector4f result = rotate.getMatrix().multiplyByVector(vec);
@@ -44,7 +44,7 @@ public class RotateTest {
     @Test
     void testLeftRotateY() {
         Vector4f vec = new Vector4f(5, 0, 0, 1);
-        Vector4f expected = new Vector4f(0, 0, -5, 1);
+        Vector4f expected = new Vector4f(0, 0, 5, 1);
         Rotate rotate = new Rotate(90, false, true, false, true);
 
         Vector4f result = rotate.getMatrix().multiplyByVector(vec);

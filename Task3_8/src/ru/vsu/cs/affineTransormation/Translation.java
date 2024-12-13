@@ -33,11 +33,6 @@ public class Translation implements IAffine {
     }
 
     @Override
-    public Vector4f transformation(Vector4f vec) {
-        return IAffine.super.transformation(vec);
-    }
-
-    @Override
     public Matrix4f getMatrix() {
         return new Matrix4f (
                 1, 0, 0, x,

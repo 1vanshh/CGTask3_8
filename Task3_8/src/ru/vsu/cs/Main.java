@@ -6,6 +6,10 @@ import ru.vsu.cs.affineTransormation.Scale;
 import ru.vsu.cs.affineTransormation.SubAffine;
 import ru.vsu.cs.affineTransormation.Translation;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public class Main {
 
 //    public static Vec3f transform(Vec3f f, IAffine affine) {
@@ -24,5 +28,17 @@ public class Main {
         subAffine.add(translation);
 
         System.out.println(subAffine.getMatrix().toString());
+        /*List<Vector4f> lll = new ArrayList<>();
+
+        List<Vector4f> qq = subAffine.transformation(lll);
+        for (Vector4f v : qq) {
+            //.....
+        }
+
+        Iterator<Vector4f> itr = qq.iterator();
+        while(itr.hasNext()) {
+            Vector4f v = itr.next();
+            //....
+        }*/
     }
 }
