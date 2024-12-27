@@ -8,10 +8,12 @@ import ru.vsu.cs.affineTransormation.Translation;
 public class TranslationTest {
 
     @Test
-    void testTranslateX() {
+    void testTranslateX() throws Exception {
         Vector4f vec = new Vector4f(0, 0, 0, 1);
-        Vector4f expected = new Vector4f(1, 0, 0, 1);
+        Vector4f expected = new Vector4f(5, 0, 0, 1);
+
         Translation translation = new Translation(1, 0, 0);
+        translation.setX(5);
 
         Vector4f result = translation.getMatrix().multiplyByVector(vec);
 

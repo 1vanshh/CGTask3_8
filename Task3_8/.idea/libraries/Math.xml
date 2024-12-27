@@ -4,6 +4,8 @@
       <root url="jar://$PROJECT_DIR$/dependencies/Math.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/dependencies/Math.jar!/" />
+    </SOURCES>
   </library>
 </component>

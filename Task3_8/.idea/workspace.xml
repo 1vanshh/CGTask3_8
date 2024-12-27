@@ -10,15 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea8ae06c-0684-47cd-9429-1bfaf7692ea8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Math.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Math.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Math.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_12_2024_19_17_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_12_2024_19_17__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_12_2024_22_42_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_12_2024_22_42__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_12_2024_14_52_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_12_2024_14_52__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task3_8.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Task3_8.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/testing/RotateTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/testing/ScaleTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/testing/SubAffineTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/testing/TranslationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/affineTransormation/Rotate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/affineTransormation/Rotate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/vsu/cs/affineTransormation/Translation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/vsu/cs/affineTransormation/Translation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +69,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.21954022",
+    "settings.editor.selected.configurable": "proofread",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -76,7 +78,7 @@
       <recent name="D:\CG\CGTask3_8\Task3_8\dependencies" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RotateTest">
+  <component name="RunManager" selected="JUnit.TranslationTest.testTranslateX">
     <configuration name="RotateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Task3_8" />
       <extension name="coverage">
@@ -88,6 +90,22 @@
       <option name="PACKAGE_NAME" value="ru.vsu.cs.testing" />
       <option name="MAIN_CLASS_NAME" value="ru.vsu.cs.testing.RotateTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RotateTest.testRightRotateX" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task3_8" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.vsu.cs.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.vsu.cs.testing" />
+      <option name="MAIN_CLASS_NAME" value="ru.vsu.cs.testing.RotateTest" />
+      <option name="METHOD_NAME" value="testRightRotateX" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -122,7 +140,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TranslationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TranslationTest.testTranslateX" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Task3_8" />
       <extension name="coverage">
         <pattern>
@@ -132,22 +150,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.vsu.cs.testing" />
       <option name="MAIN_CLASS_NAME" value="ru.vsu.cs.testing.TranslationTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TranslationTest.testZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Task3_8" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.vsu.cs.testing.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.vsu.cs.testing" />
-      <option name="MAIN_CLASS_NAME" value="ru.vsu.cs.testing.TranslationTest" />
-      <option name="METHOD_NAME" value="testZero" />
+      <option name="METHOD_NAME" value="testTranslateX" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -155,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TranslationTest.testTranslateX" />
+        <item itemvalue="JUnit.RotateTest.testRightRotateX" />
         <item itemvalue="JUnit.RotateTest" />
         <item itemvalue="JUnit.SubAffineTest" />
         <item itemvalue="JUnit.ScaleTest" />
-        <item itemvalue="JUnit.TranslationTest.testZero" />
-        <item itemvalue="JUnit.TranslationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -185,7 +188,8 @@
       <workItem from="1732949951571" duration="89000" />
       <workItem from="1732955433838" duration="5285000" />
       <workItem from="1734090682188" duration="2388000" />
-      <workItem from="1734113668194" duration="1766000" />
+      <workItem from="1734113668194" duration="1847000" />
+      <workItem from="1735285521043" duration="1200000" />
     </task>
     <servers />
   </component>
@@ -202,5 +206,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

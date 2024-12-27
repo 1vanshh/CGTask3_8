@@ -39,6 +39,14 @@ public class Rotate implements IAffine {
         return matrix;
     }
 
+    public void setAngle(float angle) {
+        this.angle = angle;
+    }
+
+    public float getAngle() {
+        return angle;
+    }
+
     private void getRotateXMatrix(double angleRad) {
         float cos = (float) Math.cos(angleRad);
         float sin = (float) Math.sin(angleRad);

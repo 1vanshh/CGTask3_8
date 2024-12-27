@@ -42,6 +42,21 @@ public class Scale implements IAffine {
         matrix = Matrix4f.setIdentity();
     }
 
+    public void setX(float x) {
+        this.matrix.changeRow(1,
+                new float[] {x, 0, 0, 0});
+    }
+
+    public void setY(float y) {
+        this.matrix.changeRow(2,
+                new float[] {0, y, 0, 0});
+    }
+
+    public void setZ(float z) {
+        this.matrix.changeRow(3,
+                new float[] {0, 0, z, 0});
+    }
+
     @Override
     public Vector4f transformation(Vector4f vec) {
         return IAffine.super.transformation(vec);

@@ -39,6 +39,21 @@ public class Translation implements IAffine {
         );
     }
 
+    public void setX(float x) throws Exception{
+        this.matrix.changeRow(1,
+                new float[] {1, 0, 0, x});
+    }
+
+    public void setY(float y) throws Exception{
+        this.matrix.changeRow(2,
+                new float[] {0, 1, 0, y});
+    }
+
+    public void setZ(float z) throws Exception{
+        this.matrix.changeRow(3,
+                new float[] {0, 0, 1, z});
+    }
+
     public Translation() {
         matrix = Matrix4f.setIdentity();
     }
